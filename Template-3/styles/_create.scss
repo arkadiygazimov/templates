@@ -1,0 +1,96 @@
+.create {
+    background-color: $font-color-first;
+
+    &__container {
+        padding: 110px 10px 105px 10px;
+        text-align: center;
+    }
+
+    &__title {
+        padding-bottom: 50px;
+        @include adaptiv-font(36,24);
+        font-weight: 700;
+        line-height: 1.5;
+        color: $font-color-second;
+    }
+
+    &__text {
+        padding-bottom: 70px;
+        @include adaptiv-font(16,14);
+        line-height: 1.5;
+        color: $font-color-third;
+    }
+
+    &__servises {
+        padding-bottom: 55px;
+    }
+}
+
+.servises {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+
+    @media screen and (max-width:600px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__box {
+        display: flex;
+        @include adaptiv-column-gap(15,10);
+
+        &--tablet {
+            @media screen and (max-width:980px) {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        width: 110px;
+        height: 110px;
+        border: 1px solid $font-color-seventh;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width:700px) {
+            transform: scale(0.8);
+        }
+    }
+
+    &__elipse {
+        width: 90px;
+        height: 90px;
+        border: 1px solid #4985FF;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        object-fit: 100%;
+    }
+
+    &__content {
+        padding-top: 55px;
+    }
+
+    &__title {
+        padding-bottom: 12px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $font-color-fourth;
+    }
+
+    &__text {
+        max-width: 220px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $font-color-third;
+    }
+}

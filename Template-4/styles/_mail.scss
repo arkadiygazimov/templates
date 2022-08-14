@@ -1,0 +1,41 @@
+.mail {
+    background-color: $bg-color-secondary;
+    background-image: url(../img/mailbg.svg);
+    background-repeat: no-repeat;
+    background-position: 78px 88px;
+    text-align: center;
+
+    &__title {
+        padding: 80px 5px 0;
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 700;
+
+            @media screen and (max-width:768px) {
+                font-size: 32px;
+            }
+    }
+
+    &__text {
+        margin-top: 16px;
+        padding: 0 10px;
+        font-size: 18px;
+        line-height: 28px;
+        color: $font-color-secondary;
+
+        @media screen and (max-width:768px) {
+            width: $container-width;
+            margin: 0 auto;
+            font-size: 22px;
+        }
+    }
+
+    &__subscribe {
+        margin-top: 48px;
+        padding-bottom: 210px;
+
+        @media screen and (max-width:768px) {
+            padding-bottom: 110px;
+        }
+    }
+}

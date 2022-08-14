@@ -1,0 +1,96 @@
+.works {
+    background: linear-gradient(to bottom, ( #504DC2 20.44%, #5F12D0 50%), #fff 50% );
+
+    @media screen and (max-width:600px) {
+        background: linear-gradient(to bottom, ( #504DC2 10%, #5F12D0 30%), #fff 30% );
+     }
+
+    &__container {
+        padding: 100px 10px 80px 10px;
+    }
+}
+
+.works-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    @media screen and (max-width:800px) {
+        text-align: center;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+     }
+
+    &__title {
+        max-width: 540px;
+        font-weight: 700;
+        @include adaptiv-font(36,24);
+        line-height: 1.5;
+        color: $font-color-first;
+    }
+
+    &__button {
+        align-self: center;
+    }
+}
+
+.works-bottom {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+
+    @media screen and (max-width:600px) {
+       flex-direction: column;
+       row-gap: 30px;
+       align-items: center;
+    }
+}
+
+.servise-box {
+    padding-bottom: 85px;
+    max-width: 350px;
+
+    @media screen and (max-width:800px) {
+        @include adaptiv-width(500,200);
+     }
+
+     @media screen and (max-width:600px) {
+        width: 100%;
+     }
+
+    &__image {
+        max-width: 350px;
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        padding-bottom: 30px;
+
+        @media screen and (max-width:800px) {
+            @include adaptiv-width(500,200);
+            @include adaptiv-height(460,160);
+         }
+
+         @media screen and (max-width:600px) {
+            width: 100%;
+            height: 300px;
+         }
+    }
+
+    &__title {
+        padding-bottom: 30px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.2;
+
+        &--number {
+            color: $font-color-fifth;
+        }
+    }
+
+    &__text {
+        padding-bottom: 30px;
+        line-height: 1.5;
+        color: $font-color-third;
+    }
+}

@@ -1,0 +1,37 @@
+.whatwedo{
+
+    &__container {
+        width: $container-width;
+        max-width: $container-width-max;
+        margin: 0 auto;
+        @include adaptiv-padding-top(150, 100);
+        @include adaptiv-padding-bottom(150, 100);
+    }
+}
+
+.content-work {
+    max-width: $content-width-max;
+    width: $container-width;
+    margin: 0 auto;
+
+    &__icon{
+        @include adaptiv-margin-bottom(30, 20);
+        @include adaptiv-margin-top(50, 30);
+
+        @media screen and (max-width:767.98px) {
+            transform: scale(0.7);
+        }
+    }
+
+    &__title {
+        @include adaptiv-margin-bottom(30, 20);
+        @include adaptiv-font(20, 16);
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+    }
+
+    &__text {
+        @include adaptiv-margin-bottom(50, 30);
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,103 @@
+.about {
+    background-color: $font-color-sixth;
+
+    &__container {
+        padding: 100px 10px 70px 10px;
+    }
+
+    &__border {
+        margin-bottom: 70px;
+    }
+}
+
+.quality {
+    padding-bottom: 90px;
+    display: flex;
+    @include adaptiv-column-gap(120,0);
+
+    @media screen and (max-width:700px) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    &__content {
+        padding-top: 50px;
+
+        @media screen and (max-width:900px) {
+            padding-top: 0;
+        }
+    }
+
+    &__title {
+        padding-bottom: 40px;
+        font-weight: 700;
+        @include adaptiv-font(36,24);
+        line-height: 1.5;
+        color: $font-color-second;
+    }
+
+    &__text {
+        padding-bottom: 30px;
+        @include adaptiv-font(16,14);
+        line-height: 1.5;
+        color: $font-color-third;
+    }
+
+    &__image {
+        width: 500px;
+        height: 400px;
+        border-radius: 30px;
+
+        @media screen and (max-width:900px) {
+            @include adaptiv-width(800,150);
+            @include adaptiv-height(650,80);
+        }
+
+        @media screen and (max-width:700px) {
+            @include adaptiv-width(800,310);
+            @include adaptiv-height(650,245);
+        }
+    }
+}
+
+.numbers {
+    display: flex;
+    @include adaptiv-column-gap(150,50);
+    justify-content: center;
+
+    @media screen and (max-width:700px) {
+        display: grid;
+        grid-template-columns: 110px 110px;
+        row-gap: 30px;
+    }
+
+    @media screen and (min-width:1440px) {
+        column-gap: 150px;
+    }
+}
+
+.number-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--tablet {
+        @media screen and (max-width:980px) {
+            display: none;
+        }
+    }
+
+    &__text {
+        padding-left: 15px;
+        font-size: 36px;
+        line-height: 1.5;
+        color: $font-color-fourth;
+    }
+
+    &__link {
+        text-decoration: none;
+        line-height: 1.5;
+        color: $font-color-third;
+    }
+}

@@ -1,0 +1,78 @@
+.projects {
+    background-color: $font-color-sixth;
+
+    &__container {
+        padding: 100px 10px 0 10px;
+        @include adaptiv-padding-bottom(145,100);
+        text-align: center;
+    }
+
+    &__title {
+        padding-bottom: 50px;
+        font-weight: 700;
+        @include adaptiv-font(36,24);
+        line-height: 1.5;
+    }
+
+    &__text {
+        padding-bottom: 70px;
+        @include adaptiv-font(16,14);
+        color: $font-color-third;
+        line-height: 1.5;
+    }
+    
+    &__galery {
+        padding-bottom: 50px;
+    }
+}
+
+.galery {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+
+    @media screen and (max-width:870px) {
+        display: grid;
+        grid-template-columns: 255px 255px;
+        justify-items: center;
+        justify-content: center;
+        row-gap: 30px;
+    }
+
+    @media screen and (max-width:600px) {
+        grid-template-columns: 1fr;
+    }
+
+    &__image {
+        width: 255px;
+        height: 255px;
+        border-radius: 10px;
+        object-fit: contain;
+
+        @media screen and (max-width:600px) {
+            @include adaptiv-width(800,300);
+            @include adaptiv-height(800,300);
+        }
+
+        &--tablet {
+
+            @media screen and (max-width:1180px) {
+                display: none;
+            }
+
+            @media screen and (max-width:870px) {
+                display: block;
+            }
+
+            @media screen and (max-width:600px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            @media screen and (max-width:600px) {
+                display: none;
+            }
+        }
+    }
+}

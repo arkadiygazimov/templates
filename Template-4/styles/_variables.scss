@@ -1,0 +1,86 @@
+// resolution
+$container-width: 95%;
+$container-width-max: 1152px;
+// fonts
+$font-family-main: 'Open Sans', sans-serif;
+// colors
+$bg-color: #f8fafc;
+$bg-color-secondary: #fff;
+$bg-color-third: #FFE6BE;
+$bg-color-fourth: #DBEEFF;
+$bg-color-fifth: #FDB302;
+$bg-color-footer: #20253E;
+$color-border-main: #f1f2f4;
+$color-border-secondary: #fcc540;
+$color-border-third: #0B1940;
+$color-border-fourth: #0759E4;
+$font-color-main: #0B1940;
+$font-color-secondary: #4C5673;
+$font-color-third: #fff;
+$font-color-fourth: #0759E4;
+$font-color-fifth: #414042;
+$font-color-footer: #F2F2F2;
+$font-color-hover: #0576B8;
+
+// adaptiv
+$maxWidth: 1440;
+$maxWidth-box: 790;
+$maxWidth-smallbox: 420;
+$maxWidth-margin: 768;
+$maxWidth-margins: 615;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+// box
+
+@mixin adaptiv-width-box($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth-box: $maxWidth-box - 630;
+    width: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 630px) / #{$maxWidth-box}));
+}
+
+@mixin adaptiv-height-box($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth-box: $maxWidth-box - 630;
+    height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 630px) / #{$maxWidth-box}));
+}
+
+// smallbox
+
+@mixin adaptiv-width-smallbox($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth-smallbox: $maxWidth-smallbox - 320;
+    width: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth-smallbox}));
+}
+
+@mixin adaptiv-height-smallbox($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth-smallbox: $maxWidth-smallbox - 320;
+    height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth-smallbox}));
+}
+
+// margin box
+
+@mixin adaptiv-margin-box($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth-margin: $maxWidth-margin - 650;
+    margin-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 650px) / #{$maxWidth-margin}));
+}
+
+@mixin adaptiv-margin-boxs($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth-margins: $maxWidth-margins - 450;
+    margin-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 450px) / #{$maxWidth-margins}));
+}
+
+// padding
+
+@mixin adaptiv-padding-bottom($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    padding-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

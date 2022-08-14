@@ -1,0 +1,19 @@
+.services{
+    background-image: url(../img/services-bg.png);
+
+    &__container {
+        width: $container-width;
+        max-width: $container-width-max;
+        margin: 0 auto;
+        @include adaptiv-padding-top(110, 80);
+        @include adaptiv-padding-bottom(110, 80);
+    }
+}
+
+.border {
+
+    &--white {
+        border-color: $background-color-secondary;
+        color: $background-color-secondary;
+    }
+}

@@ -1,0 +1,50 @@
+.footer {
+    height: 5.5rem;
+    background-color: $background-color-footer;
+    color: $font-color-footer;
+
+    &__container {
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: $container-width-max;
+        width: $container-width;
+
+        @media screen and (max-width:767px) {
+            width: $container-width-secondary;
+        }
+    }
+
+    &__company {
+        font-weight: 500;
+
+        @media screen and (max-width:767px) {
+            @include adaptiv-font(28, 8);
+        }
+    }
+
+    &__logo {
+        font-size: 25px;
+        font-weight: 500;
+        font-family: $font-logo;
+
+        @media screen and (max-width:767px) {
+            @include adaptiv-font(38, 14);
+        }
+    }
+
+    &__made {
+        font-weight: 500;
+
+        @media screen and (max-width:767px) {
+            @include adaptiv-font(28, 8);
+        }
+
+        &--pink {
+            color: #ff2b58;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,200 @@
+.header {
+    background-image: url(../img/header_photo.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    &__container {
+        padding: 40px 10px 0 10px;
+        @include adaptiv-padding-bottom(335,100);
+        color: $font-color-first;
+        text-align: center;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        line-height: 80px;
+        font-size: 28px;
+        font-weight: 700;
+
+        @media screen and (max-width:851px) {
+            display: block;
+            z-index: 50;
+            position: fixed;
+            top: 0;
+            line-height: 70px;
+            font-size: 28px;
+            font-weight: 700;
+            color: #323232;
+        }
+    }
+
+    &__title {
+        padding: 260px 0 20px 0;
+        @include adaptiv-font(32,24);
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    &__slogan {
+        max-width: 830px;
+        margin: 0 auto;
+        max-width: 830px;
+        padding-bottom: 50px;
+        @include adaptiv-font(48,28);
+        font-weight: 800;
+        line-height: 1.2;
+    }
+}
+
+.nav {
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 40px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $font-color-first;
+        font-weight: 500;
+        line-height: 1.2;
+        z-index: 3;
+
+        @media screen and (max-width:851px) {
+            color: $font-color-second;
+        }
+    }
+}
+
+// ------------ BURGER -----------------
+
+@media screen and (max-width:851px) {
+
+    .header {
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            // background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
+            background-color: $font-color-sixth;
+            z-index: 30;
+        }
+
+        &__burger {
+    
+            display: block;
+            position: fixed;
+            top: 25px;
+            right: 20px;
+            width: 30px;
+            height: 20px;
+            z-index: 999;
+
+            &::before {
+                content: "";
+                background-color:$font-color-second;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: 0;
+                transition: 0.5s;
+            }
+
+            &::after {
+                content: "";
+                background-color:$font-color-second;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                transition: 0.5s;
+            }
+
+            & span {
+                background-color:$font-color-second;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: 9px;
+            }
+
+            &.active::before {
+                transform: rotate(45deg);
+                background-color: $font-color-second;
+                transition: transform 0.5s;
+                top: 9px;
+            }
+
+            &.active::after {
+                transform: rotate(-45deg);
+                background-color: $font-color-second;
+                transition: transform 0.5s;
+                bottom: 9px;
+            }
+
+            &.active span {
+                display: none;
+            }
+        }
+    }
+
+    // burger-nav
+
+    .nav {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+        background-color: $font-color-first;
+        z-index: 3;
+
+        &.active {
+
+            right: -20%;
+            transition: 0.5s;
+        }
+    
+        &__list {
+                
+            z-index: 5;
+            margin-right: 20%;
+            padding-top: 200px;
+            flex-direction: column;
+            font-size: 24px;
+            text-transform: uppercase;
+            row-gap: 30px;
+        }
+    }
+
+    // background
+
+    .nav-bg {
+        position: fixed;
+        left: -150%;
+        top: 0;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+        background-color: $font-color-fourth;
+        opacity: 0;
+        z-index: 2;
+    
+        &.active {
+            left: 0;
+            opacity: 0.4;
+            transition: 0.5s;
+        }
+    }
+}

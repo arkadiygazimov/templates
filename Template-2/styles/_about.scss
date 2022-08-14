@@ -1,0 +1,59 @@
+.about {
+    background-color: $background-color-about;
+
+    &__container {
+        display: flex;
+        @include adaptiv-padding-top(70, 50);
+        @include adaptiv-padding-bottom(70, 50);
+        align-items: center;
+        justify-content: center;
+        @include adaptiv-gap-column(40, 10);
+
+        @media screen and (max-width:760px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        @include adaptiv-width(550, 300);
+        @include adaptiv-height(550, 300);
+        flex: 0 1 35%;
+    }
+
+    &__content {
+        flex: 1 0 40%;
+        padding-right: 2rem;
+        max-width: $about-width-max;
+        color: $font-color-secondary;
+
+        @media screen and (max-width:760px) {
+            padding: 0 1rem;
+        }
+    }
+
+    &__title {
+        @include adaptiv-font(90, 48);
+        line-height: 1;
+        font-weight: 700;
+        @include adaptiv-padding-bottom(60, 0);
+
+        @media screen and (max-width:760px) {
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__text {
+        @include adaptiv-font(17, 14);
+        line-height: 1.5;
+        font-weight: 500;
+
+        &:not(:last-child) {
+            @include adaptiv-padding-bottom(60, 0);
+
+            @media screen and (max-width:760px) {
+                padding-bottom: 1.5rem;
+            }
+        }
+    }
+}

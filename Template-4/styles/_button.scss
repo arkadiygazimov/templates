@@ -1,0 +1,121 @@
+.button {
+    border-radius: 6px;
+    cursor: pointer;
+    
+    &--login {
+        width: 106px;
+        height: 40px;
+        background-color: $bg-color;
+        border: 2px solid $color-border-secondary;
+
+        @media screen and (max-width:992px) {
+            display: none;
+        }
+    }
+
+    &--login-mobile {
+        border: none;
+        background-color: transparent;
+        margin-top: 3px;
+
+        @media screen and (min-width:992px) {
+            display: none;
+        }
+
+        @media screen and (max-width:992px) {
+            display: block;
+        }
+
+    }
+
+    &--registration {
+        width: 176px;
+        height: 48px;
+        background: linear-gradient(266.21deg, #2196F5 -11.46%, #0868C6 100%);
+        box-shadow: 0px 7px 18px -8px rgba(39, 125, 201, 0.88);
+        border: none;
+
+        &:hover {
+            box-shadow: 0px 10px 22px -8px rgba(39, 125, 201, 0.88);
+        }
+    }
+
+    &--started {
+        width: 85%;
+        height: 48px;
+        background-color: transparent;
+        border: 1px solid $color-border-fourth;
+    }
+
+    &--view {
+        width: 108px;
+        height: 48px;
+        background-color: $bg-color-secondary;
+        border: 1px solid $color-border-third;
+    }
+
+    &--email {
+        width: 140px;
+        height: 40px;
+        background-color: $color-border-fourth;
+        border: none;
+    }
+
+    
+    &--start {
+        width: 176px;
+        height: 48px;
+        background-color: $bg-color-fifth;
+        border: none;
+    }
+
+    &--register {
+        width: 85%;
+        height: 48px;
+        background-color: transparent;
+        border: 1px solid $color-border-fourth;
+
+        &:hover {
+            border: 1px solid $color-border-secondary;
+        }
+
+        &:hover span {
+            color: $color-border-secondary;
+        }
+    }
+
+    &__logintext {
+        color: $font-color-main;
+
+        &:hover {
+            color: $font-color-hover;
+        }
+    }
+
+    &__startedtext {
+        font-size: 18px;
+        font-weight: 600;
+        color: $font-color-fourth;
+    }
+
+    &__registertext {
+        font-weight: 600;
+        line-height: 1.5;
+        color: $font-color-third;
+    }
+
+    &__viewtext {
+        font-weight: 600;
+    }
+
+    &__emailtext {
+        font-weight: 600;
+        color: $font-color-third;
+    }
+
+    &__starttext {
+        font-size: 18px;
+        font-weight: 600;
+        color: $font-color-third;
+    }
+}

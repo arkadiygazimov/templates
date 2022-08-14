@@ -1,0 +1,68 @@
+.slides {
+
+
+    &__container {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr  1.3fr 1fr;
+        justify-items: center;
+        gap: 0.625rem;
+        width: 100%;
+
+        @media screen and (max-width:1070px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width:767.98px) {
+            grid-template-columns: 1fr;
+            width: $container-width;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        @include adaptiv-height(240, 130);
+
+        &--mobile {
+            @media screen and (max-width:767.98px) {
+                display: none;
+            }
+        }
+
+        &--img1 {
+            background-image: url(../img/gallery-1-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--img2 {
+            background-image: url(../img/gallery-2-bg.png);
+        }
+
+        &--img3 {
+            background-image: url(../img/gallery-3-bg.png);
+        }
+
+        &--img4 {
+            background-image: url(../img/gallery-4-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--img5 {
+            background-image: url(../img/gallery-5-bg.png);
+        }
+
+        &--img6 {
+            background-image: url(../img/gallery-6-bg.png);
+        }
+    }
+
+    &__link {
+        color: $font-color-main;
+        display: inline-block;
+        @include adaptiv-margin-top(120, 80);
+        padding-left: 2rem;
+        @include adaptiv-font(34, 22);
+    }
+}

@@ -1,0 +1,44 @@
+.services {
+    background-color: $background-color-services;
+
+
+    &__container {
+        @include adaptiv-padding-top(150, 60);
+        @include adaptiv-padding-bottom(130, 60);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptiv-gap-column(120, 50);
+
+        @media screen and (max-width:800px) {
+            flex-direction: column-reverse;
+            text-align: center;
+            row-gap: 3rem;
+        }
+    }
+
+    &__title {
+        background-image: url(../img/service-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include adaptiv-padding-top(185, 80);
+        @include adaptiv-padding-bottom(185, 80);
+        padding-right: 1rem;
+        @include adaptiv-font(90, 40);
+        line-height: 1;
+        font-weight: 700;
+        color: $font-color-secondary;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    @include adaptiv-margin-left(96, 10);
+
+    @media screen and (max-width:800px) {
+        margin: 0 auto;
+    }
+}

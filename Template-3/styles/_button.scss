@@ -1,0 +1,22 @@
+.button {
+    cursor: pointer;
+    width: 200px;
+    height: 45px;
+    background-color: $font-color-fifth;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px;
+    border: none;
+    color: $font-color-first;
+    font-weight: 500;
+    line-height: 1.2;
+
+    &--subscribe {
+        width: 60%;
+        box-shadow: none;
+        border-radius: 0px 30px 30px 0px;
+
+        @media screen and (max-width:450px) {
+            font-size: 13px;
+        }
+    }
+}

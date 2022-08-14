@@ -1,0 +1,140 @@
+.blog {
+    background-color: $background-color-blog;
+
+    &__container {
+        max-width: $container-width-max;
+        margin: 0 auto;
+        @include adaptiv-padding-top(150, 60);
+        @include adaptiv-padding-bottom(130, 60);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        padding-bottom: 1rem;
+        text-align: center;
+        @include adaptiv-font(90, 48);
+        line-height: 1;
+        font-weight: 700;
+        color: $font-color-secondary;
+    }
+
+    &__text {
+        max-width: $galery-text-width-max;
+        width: $container-width;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+        text-align: center;
+        @include adaptiv-font(17, 14);
+        line-height: 1.5;
+        font-weight: 500;
+        color: $font-color-secondary;
+    }
+
+    &__boxes {
+        padding-bottom: 3rem;
+    }
+}
+
+.boxes {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+
+    @media screen and (max-width:600px) {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    &__text {
+        @include adaptiv-padding-top(120, -30);
+        @include adaptiv-padding-bottom(16, 0);
+        font-size: 1.25rem;
+        font-weight: 600;
+
+        @media screen and (max-width:940px) {
+            @include adaptiv-padding-top(200, -20);
+            @include adaptiv-padding-bottom(28, 0);
+        }
+
+        @media screen and (max-width:600px) {
+            @include adaptiv-padding-top(280, 80);
+            @include adaptiv-padding-bottom(36, 8);
+            @include adaptiv-font(24, 18)
+        }
+    }
+
+    &__autor {
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+
+    &__item {
+        @include adaptiv-width(360, 200);
+        @include adaptiv-height(310, 150);
+        padding: 1.875rem 1.25rem 1.5rem;
+        text-decoration: none;
+        outline: none;
+        color: $font-color-secondary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+
+        @media screen and (max-width:940px) {
+            @include adaptiv-width(540, 180);
+            @include adaptiv-height(465, 130);
+        }
+
+        @media screen and (max-width:600px) {
+            @include adaptiv-width(600, 300);
+            @include adaptiv-height(525, 260);
+        }
+
+        &--green {
+            background-image: linear-gradient(transparent 0%, transparent 50%, #000000 100%), url(../img/blog-bg-1.png);
+        }
+    
+        &--growing {
+            background-image: linear-gradient(transparent 0%, transparent 50%, #000000 100%), url(../img/blog-bg-2.png);
+        }
+    
+        &--pesticides {
+            background-image: linear-gradient(transparent 0%, transparent 50%, #000000 100%), url(../img/blog-bg-3.png);
+        }
+
+        &--hiden {
+            @media screen and (max-width:940px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.date {
+    width: 3.75rem;
+    height: 3.75rem;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    @media screen and (max-width:700px) {
+        transform: scale(0.9);
+    }
+
+    &__number {
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 600;
+    }
+
+    &__mounth {
+        font-size: 1.25rem;
+        line-height: 1;
+        font-weight: 800
+    }
+}

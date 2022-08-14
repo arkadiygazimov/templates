@@ -1,0 +1,25 @@
+.footer {
+
+    &__container {
+        width: $container-width;
+        max-width: $container-width-max;
+        margin: 0 auto;
+        @include adaptiv-padding-bottom(60, 30);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+    }
+
+    &__logo {
+        transform: scale(0.6);
+    }
+
+    &__text {
+        font-size: 0.8rem;
+
+        @media screen and (max-width:360px) {
+            font-size: 0.6rem; 
+        }
+    }
+}

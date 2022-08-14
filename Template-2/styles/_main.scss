@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: $font-main;
+    color: $font-color-main;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color-main;
+}
+
+ul {
+    list-style: none;
+}

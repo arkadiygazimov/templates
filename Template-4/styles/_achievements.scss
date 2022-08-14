@@ -1,0 +1,80 @@
+.achievements {
+    background-color: $bg-color-secondary;
+    text-align: center;
+
+    &__numbers {
+        padding-top: 104px;
+    }
+
+    &__title {
+        margin-top: 104px;
+
+        @media screen and (max-width:375px) {
+            width: $container-width;
+        }
+    }
+
+    &__companies {
+        margin-top: 52px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__slider {
+        margin: 50px auto 0;
+        padding-bottom: 150px;
+
+        @media screen and (max-width:768px) {
+            margin: 25px auto 0;
+            padding-bottom: 110px;
+        }
+    }
+}
+
+.numbers {
+    width: 80%;
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    text-align: center;
+
+    @media screen and (max-width:799px) {
+        grid-template-columns:  1fr 1fr;
+        justify-items: center;
+    }
+
+    @media screen and (max-width:768px) {
+        padding-top: 64px;
+    }
+
+    &__item {
+        margin-top: 35px;
+    }
+
+    &__elipse {
+        margin: 0 auto;
+        width: 72px;
+        height: 72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-color-third;
+        border-radius: 50%;
+    }
+
+    &__title {
+        margin-top: 32px;
+        font-weight: 700;
+        @include adaptiv-font(32, 26);
+        line-height: 1.25;
+    }
+
+    &__text {
+        margin-top: 16px;
+        padding: 0 5px;
+        @include adaptiv-font(18, 16);
+        line-height: 1.4;
+    }
+}

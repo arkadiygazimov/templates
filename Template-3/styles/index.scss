@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+@import 'variables';
+@import 'mixins';
+@import 'main';
+@import 'header';
+@import 'create';
+@import 'about';
+@import 'works';
+@import 'projects';
+@import 'video';
+@import 'subscribe';
+@import 'footer';
+@import 'button';

@@ -1,0 +1,81 @@
+.finally {
+    background: url(../img/finally/pattern.svg) 77px 193px, url(../img/finally/bg.svg), linear-gradient(93.1deg, #77B4E8 -30.33%, #0759E4 51.89%, #213595 147.55%);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $font-color-third;
+
+    &__title {
+        padding: 104px 5px 0;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 68px;
+
+        @media screen and (max-width:1080px) {
+            font-size: 36px;
+            padding-top: 60px;
+        }
+
+        @media screen and (max-width:768px) {
+            padding-top: 114px;
+            font-size: 34px;
+            line-height: 46px;
+        }
+    }
+
+    &__quote {
+        margin-top: 29px;
+        padding: 0 10px;
+        font-size: 28px;
+        line-height: 42px;
+
+        @media screen and (max-width:1080px) {
+            font-size: 18px;
+            margin-top: 10px;
+            width: $container-width;
+        }
+
+        &::before {
+            content: "”";
+            font-size: 40px;
+            line-height: 54px;
+            padding-right: 5px;
+        }
+
+        &::after {
+            content: "”";
+            font-size: 40px;
+            line-height: 54px;
+            padding-left: 5px;
+        }
+    }
+
+    &__text {
+        margin-top: 80px;
+        padding: 0 10px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 42px;
+
+        @media screen and (max-width:1080px) {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width:768px) {
+            font-size: 22px;
+            width: $container-width;
+        }
+    }
+
+    &__button {
+        margin: 32px 0 96px;
+
+        @media screen and (max-width:768px) {
+            width: 200px;
+            height: 55px;
+        }
+    }
+}

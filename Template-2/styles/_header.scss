@@ -1,0 +1,216 @@
+.header {
+    background-color: $background-color-header;
+    background-image: url(../img/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50px top;
+}
+
+.header-top {
+
+    @media screen and (max-width:849px) {
+        position: fixed;
+        background-color: $background-color-header;
+        width: 100%;
+        z-index: 999;
+    }
+
+    &__container {
+        width: $container-width;
+        max-width: $container-width-max;
+        @include adaptiv-height(150, 80);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+
+    &__text {
+        @include adaptiv-font(50, 30);
+        font-family: $font-logo;
+        font-style: italic;
+    }
+}
+
+.nav {
+
+    &__list {
+        display: flex;
+        @include adaptiv-gap-column(30, 20);
+        text-transform: uppercase;
+    }
+
+    &__item {
+        border-top: 3px solid transparent;
+        padding-top: 0.3rem;
+        
+        &:hover {
+            border-top: 3px solid $background-color-border;
+        }
+    }
+
+    &__link {
+        @include adaptiv-font(16, 13);
+        font-weight: 700;
+    }
+}
+
+// Burger start
+
+@media screen and (max-width:851px) {
+
+    .header-top {
+
+        &__burger {
+    
+            display: block;
+            position: fixed;
+            right: 20px;
+            width: 30px;
+            height: 20px;
+            z-index: 999;
+
+            &::before {
+                content: "";
+                background-color: $font-color-main;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: 0;
+                transition: 0.5s;
+            }
+
+            &::after {
+                content: "";
+                background-color: $font-color-main;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                transition: 0.5s;
+            }
+
+            & span {
+                background-color: $font-color-main;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: 9px;
+            }
+
+            &.active::before {
+                transform: rotate(45deg);
+                background-color: $font-color-main;
+                transition: transform 0.5s;
+                top: 9px;
+            }
+
+            &.active::after {
+                transform: rotate(-45deg);
+                background-color: $font-color-main;
+                transition: transform 0.5s;
+                bottom: 9px;
+            }
+
+            &.active span {
+                display: none;
+            }
+        }
+    }
+
+    // burger-nav
+
+    .nav {
+        position: fixed;
+        right: -100%;
+        @include adaptiv-top(150,80);
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+        background-color: $background-color-services;
+        z-index: 3;
+
+        &.active {
+
+            right: -20%;
+            transition: 0.5s;
+        }
+    
+        &__list {
+                
+            z-index: 5;
+            margin-right: 20%;
+            padding-top: 100px;
+            flex-direction: column;
+            align-items: center;
+            font-size: 24px;
+            text-transform: uppercase;
+            row-gap: 30px;
+        }
+
+        &__link {
+            font-size: 24px;
+        }
+    }
+
+    // background
+
+    .nav-bg {
+        position: fixed;
+        left: -100%;
+        @include adaptiv-top(150,80);
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.3;
+        z-index: 2;
+    
+        &.active {
+
+            left: 0;
+            transition: 0.5s;
+        }
+    }
+}
+
+// Burger end
+
+.header-bottom {
+    display: flex;
+
+    &__container {
+        width: $container-width;
+        max-width: $container-width-max;
+        margin: 0 auto;
+        @include adaptiv-padding-top(150, 80);
+    }
+
+    &__fresh {
+        @include adaptiv-padding-top(150, 50);
+        @include adaptiv-padding-bottom(290, 140);
+        max-width: $fresh-width-max;
+    }
+}
+
+.fresh {
+
+    &__title {
+        @include adaptiv-padding-bottom(20, 10);
+        @include adaptiv-font(60, 36);
+        font-weight: 900;
+    }
+
+    &__text {
+        padding-bottom: 1rem;
+        @include adaptiv-font(17, 15);
+        line-height: 1.5;
+        font-weight: 500;
+    }
+}

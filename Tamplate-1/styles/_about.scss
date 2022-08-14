@@ -1,0 +1,34 @@
+.about {
+
+    &__container {
+        width: $container-width;
+        max-width: $container-width-max;
+        margin: 0 auto;
+        @include adaptiv-padding-top(150, 100);
+        @include adaptiv-padding-bottom(150, 100);
+    }
+}
+
+.border {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $background-color-main;
+    text-align: center;
+
+    &__title {
+        @include adaptiv-margin-bottom(60, 30);
+        padding: 0 2.94rem;
+        @include adaptiv-font(34, 22);
+        font-weight: 700;
+        @include adaptiv-spacing(8, 4);
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: $text-width;
+        width: $container-width;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+}

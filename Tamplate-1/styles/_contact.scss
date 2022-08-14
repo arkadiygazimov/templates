@@ -1,0 +1,23 @@
+.contact {
+
+    &__container {
+        width: $container-width;
+        max-width: $container-width-max;
+        margin: 0 auto;
+        @include adaptiv-padding-top(150, 100);
+        @include adaptiv-padding-bottom(150, 100);
+    }
+}
+
+.button {
+    cursor: pointer;
+    background-color: $background-color-main;
+    color: $font-color-main;
+    @include adaptiv-width(390, 200);
+    height: 7vh;
+    margin: 0 auto 6vh;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
